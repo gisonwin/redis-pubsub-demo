@@ -1,0 +1,31 @@
+server:
+  port: 8600
+  tomcat:
+      # tomcat的URI编码
+      uri-encoding: UTF-8
+      # tomcat最大线程数，默认为200
+      max-threads: 800
+      # Tomcat启动初始化的线程数，默认值25
+      min-spare-threads: 30
+
+spring:
+  application:
+      # 应用名称
+    name: linose-pubsub
+  # redis 配置
+  redis:
+    # 地址
+#    host: 124.70.89.186
+    host: 127.0.0.1
+    # 端口，默认为6379
+    port: 6379
+    # 密码
+#    password: redis@sailmi
+
+
+# 日志配置
+logging:
+  level:
+    com.linose: debug
+    org.springframework: warn
+
